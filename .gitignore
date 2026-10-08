@@ -31,6 +31,9 @@ terraform.rc
 
 # tf-migrate generated files
 _hcp-migrate-configs/
+_hcp-migrate-configs/*
+_hcp-migrate-configs*/*
+
 
 # Editor / OS files
 .DS_Store
@@ -40,8 +43,8 @@ _hcp-migrate-configs/
 
 # Env files and local secrets
 .env
-.env.*
+.env.
 # These lines were added by the tf-migrate CLI tool
+_hcp-migrate-configs-*/
 !_hcp-migrate-configs*/terraform.tfstate
 .terraform.lock.*
-_hcp-migrate-configs-*/
