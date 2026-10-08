@@ -41,3 +41,7 @@ _hcp-migrate-configs/
 # Env files and local secrets
 .env
 .env.*
+# These lines were added by the tf-migrate CLI tool
+!_hcp-migrate-configs*/terraform.tfstate
+.terraform.lock.*
+_hcp-migrate-configs-*/
