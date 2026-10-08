@@ -7,21 +7,18 @@
 ###############################################################################
 
 terraform {
-
+  
+  backend "s3" {
+    bucket = "demo-state-bucket-main"
+    key    = "terraform.tfstate"
+    region = "us-west-2"
+  }
   required_version = ">= 1.16.0"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 6.0"
-    }
-  }
-  cloud {
-    organization = "luisroset-org"
-    hostname     = "app.terraform.io"
-    workspaces {
-      project = "tf_migrate_example"
-      name    = "tf_migrate_example_default"
     }
   }
 }
