@@ -13,6 +13,7 @@ crash.*.log
 *.tfvars
 *.tfvars.json
 !example.tfvars
+.terraform.lock.hcl
 
 # Override files (local-only)
 override.tf
